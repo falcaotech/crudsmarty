@@ -24,15 +24,10 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   'nocache_hash' => '721853838fbe0a11a0-42584650',
   'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_538399ca52f912_49608422',
-  'variables' => 
-  array (
-    'produtos' => 0,
-    'produto' => 0,
-  ),
+  'unifunc' => 'content_5383aa030e8013_94040233',
   'has_nocache_code' => false,
 ),true); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_538399ca52f912_49608422')) {function content_538399ca52f912_49608422($_smarty_tpl) {?><!DOCTYPE html>
+<?php if ($_valid && !is_callable('content_5383aa030e8013_94040233')) {function content_5383aa030e8013_94040233($_smarty_tpl) {?><!DOCTYPE html>
 <html>
     <head>
         <meta charset="UTF-8">
@@ -67,9 +62,36 @@ $_valid = $_smarty_tpl->decodeProperties(array (
 	<th>Ações</th>
     </tr>
     
-    	<tr>
-	    <td colspan="5">Nenhum produto cadastrado.</td>
-	</tr>
+        <tr>
+	<td>Caderno</td>
+	<td>Descrição do produto caderno</td>
+	<td>Categoria 02</td>
+	<td>Fabricante 02</td>
+	<td>
+	    <a href="editar.php?id=1">Editar</a>
+	    <a href="excluir.php?id=1">Excluir</a>
+	</td>
+    </tr>
+        <tr>
+	<td>Lapis</td>
+	<td>Descrição do produto lapis</td>
+	<td>Categoria 01</td>
+	<td>Fabricante 01</td>
+	<td>
+	    <a href="editar.php?id=2">Editar</a>
+	    <a href="excluir.php?id=2">Excluir</a>
+	</td>
+    </tr>
+        <tr>
+	<td>Borracha</td>
+	<td>Descrição do produto borracha</td>
+	<td>Categoria 03</td>
+	<td>Fabricante 03</td>
+	<td>
+	    <a href="editar.php?id=3">Editar</a>
+	    <a href="excluir.php?id=3">Excluir</a>
+	</td>
+    </tr>
     </table>
 
     </body>
