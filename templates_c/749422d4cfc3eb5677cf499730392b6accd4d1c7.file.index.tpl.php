@@ -1,6 +1,6 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 10:52:56
+<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 11:27:30
          compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:79235384989faac6d9-68631734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:47655384a0d29fdac0-25858290%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
@@ -11,21 +11,20 @@ $_valid = $_smarty_tpl->decodeProperties(array (
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '79235384989faac6d9-68631734',
+  'nocache_hash' => '47655384a0d29fdac0-25858290',
   'function' => 
   array (
   ),
-  'cache_lifetime' => 120,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5384989fb3d0c5_07831522',
   'variables' => 
   array (
     'produtos' => 0,
     'produto' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5384a0d2a8e815_82319535',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5384989fb3d0c5_07831522')) {function content_5384989fb3d0c5_07831522($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5384a0d2a8e815_82319535')) {function content_5384a0d2a8e815_82319535($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 
 <h1>Produtos</h1>
@@ -69,5 +68,5 @@ if (!$_smarty_tpl->tpl_vars["produto"]->_loop) {
     <?php } ?>
 </table>
 
-<?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+<?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 <?php }} ?>

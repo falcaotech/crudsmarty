@@ -14,13 +14,13 @@
 	$categoria_id  = $_POST['categoria_id'];
 	$fabricante_id = $_POST['fabricante_id'];
 	//monta o comando de inserção no BD
-	$comando = "INSERT INTO produto (nome, descricao, categoria_id, fabricante_id) VALUES ('$nome', '$descricao', '$categoria_id', '$fabricante_id')";
+	$comando = "INSERT INTO fabricante (nome, descricao) VALUES ('$nome', '$descricao')";
 //	echo $comando;
 //	exit;
 	//executa e verifica se o comando foi realizado com sucesso
 	if (mysqli_query($link, $comando)) {
 	    //se foi cadastrado com sucesso
-	    header("Location:index.php");	    
+	    header("Location:fabricantes.php");	    
 	} else {
 	    //se deu erro
 	    echo '<p>Erro ao cadastrar.</p>';
@@ -28,22 +28,6 @@
 	    die();
 	}
     }
-   
-     //seleciona as categorias cadastradas no banco
-    $comando = "SELECT * FROM categoria";
-    //executa a consulta
-    $consulta = mysqli_query($link, $comando);
-    //cria um array para as categorias
-    $categorias = array();
-    //laço para popular o array dos produtos
-    while($categoria = mysqli_fetch_assoc($consulta)){
-	//adiciona o produto da vez ao array produtos 
-	$categorias[] = $categoria;
-    }
-     //envia a variável categorias para o templates
-    $tpl->assign('categorias', $categorias);
-    
-    
     //seleciona os fabricantes cadastrados no banco
     $comando = "SELECT * FROM fabricante";
      //executa a consulta
@@ -57,10 +41,11 @@
     }
      //envia a variável fabricantes para o template
     $tpl->assign('fabricantes', $fabricantes);
-
+    
     //envia o título da página
-    $tpl->assign("titulo", "Cadastro de produtos");
+    $tpl->assign("titulo", "Cadastro de fabricantes");
+    
     
     //exibe o template
-    $tpl->display("cadastrar.tpl");
-   //$tpl->display(str_replace("/", "", str_replace(".php", ".tpl", $_SERVER['SCRIPT_NAME'])));
+    $tpl->display("cadastrar_fabricantes.tpl");
+    //$tpl->display(str_replace("/", "", str_replace(".php", ".tpl", $_SERVER['SCRIPT_NAME'])));

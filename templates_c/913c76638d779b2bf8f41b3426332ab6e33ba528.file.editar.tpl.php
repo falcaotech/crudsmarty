@@ -1,41 +1,48 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 11:17:30
-         compiled from ".\templates\cadastrar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3217453849a3148d170-54078919%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 13:13:30
+         compiled from ".\templates\editar.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:152575384a72ff0d2f1-26071026%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    'e7843731932c7cda3d6006ae56f8ccc38da101b9' => 
+    '913c76638d779b2bf8f41b3426332ab6e33ba528' => 
     array (
-      0 => '.\\templates\\cadastrar.tpl',
-      1 => 1401200249,
+      0 => '.\\templates\\editar.tpl',
+      1 => 1401207199,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3217453849a3148d170-54078919',
+  'nocache_hash' => '152575384a72ff0d2f1-26071026',
   'function' => 
   array (
   ),
-  'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_53849a3152ac23_84143689',
+  'unifunc' => 'content_5384a73004a5c6_72812866',
   'variables' => 
   array (
+    'produto' => 0,
     'categorias' => 0,
     'item' => 0,
     'fabricantes' => 0,
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53849a3152ac23_84143689')) {function content_53849a3152ac23_84143689($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5384a73004a5c6_72812866')) {function content_5384a73004a5c6_72812866($_smarty_tpl) {?>
+<?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 	
-	<h1>Novo produto</h1>
+	<h1>Edição de produto</h1>
 	
-	<form action="cadastrar.php" method="post">
+	<form action="editar.php?id=<?php echo $_smarty_tpl->tpl_vars['produto']->value['id'];?>
+" method="post">
 	    
-	    <label for="nome" style="display: inline-block; width: 75px;">Nome</label>
-	    <input type="text" name="nome" id="nome" />
-	      
+	    <input type="hidden" name="id" value="<?php echo $_smarty_tpl->tpl_vars['produto']->value['id'];?>
+" />
+	    
+	    
+	    <label for="nome">Nome</label>
+	    <input type="text" name="nome" id="nome" value="<?php echo $_smarty_tpl->tpl_vars['produto']->value['nome'];?>
+" />
+	    
 	    <br />
 	    
 	    <label for="categoria_id" style="display: inline-block; width: 75px;">Categoria</label>
@@ -47,7 +54,7 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
 		    <option value="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['nome'];?>
+"  <?php if ($_smarty_tpl->tpl_vars['item']->value['id']==$_smarty_tpl->tpl_vars['produto']->value['categoria_id']) {?>selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['item']->value['nome'];?>
 </option>
 		<?php } ?>
 	    </select>
@@ -63,15 +70,16 @@ foreach ($_from as $_smarty_tpl->tpl_vars['item']->key => $_smarty_tpl->tpl_vars
 $_smarty_tpl->tpl_vars['item']->_loop = true;
 ?>
 		    <option value="<?php echo $_smarty_tpl->tpl_vars['item']->value['id'];?>
-"><?php echo $_smarty_tpl->tpl_vars['item']->value['nome'];?>
+"  <?php if ($_smarty_tpl->tpl_vars['item']->value['id']==$_smarty_tpl->tpl_vars['produto']->value['fabricante_id']) {?>selected<?php }?>><?php echo $_smarty_tpl->tpl_vars['item']->value['nome'];?>
 </option>
 		<?php } ?>
 	    </select>
 	    
 	    <br />
 	    
-	    <label for="descricao" style="display: inline-block; width: 75px;">Descrição</label>
-	    <textarea name="descricao" id="descricao" ></textarea>
+	    <label for="descricao">Descrição</label>
+	    <textarea name="descricao" id="descricao" ><?php echo $_smarty_tpl->tpl_vars['produto']->value['descricao'];?>
+</textarea>
 	    
 	    <br />
 	    
@@ -81,5 +89,6 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 	
 	<a href="index.php">Voltar</a>
 	
-<?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+    <?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
+
 <?php }} ?>

@@ -23,9 +23,14 @@ while($produto = mysqli_fetch_assoc($consulta)){
 }
 
 //envia o array produtos para o template
+$tpl->assign("miolo", "produtos");
+
+//envia o array produtos para o template
 $tpl->assign("produtos", $produtos);
+
 //envia o título da página
 $tpl->assign("titulo", "Página inicial - Listagem de produtos");
 
 //exibe o template
-$tpl->display('index.tpl');
+$tpl->display("index.tpl");
+//$tpl->display(str_replace("/", "", str_replace(".php", ".tpl", $_SERVER['SCRIPT_NAME'])));

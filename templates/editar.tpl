@@ -1,19 +1,23 @@
+
 {include file="includes/header.tpl"}
 	
-	<h1>Novo produto</h1>
+	<h1>Edição de produto</h1>
 	
-	<form action="cadastrar.php" method="post">
+	<form action="editar.php?id={$produto.id}" method="post">
 	    
-	    <label for="nome" style="display: inline-block; width: 75px;">Nome</label>
-	    <input type="text" name="nome" id="nome" />
-	      
+	    <input type="hidden" name="id" value="{$produto.id}" />
+	    
+	    
+	    <label for="nome">Nome</label>
+	    <input type="text" name="nome" id="nome" value="{$produto.nome}" />
+	    
 	    <br />
 	    
 	    <label for="categoria_id" style="display: inline-block; width: 75px;">Categoria</label>
 	    <select name="categoria_id" id="nome" value="<?php echo $produto['nome']; ?>">
 		<option></option>
 		{foreach from=$categorias item='item'}
-		    <option value="{$item['id']}">{$item['nome']}</option>
+		    <option value="{$item.id}"  {if $item.id == $produto.categoria_id}selected{/if}>{$item.nome}</option>
 		{/foreach}
 	    </select>
 	    
@@ -23,14 +27,14 @@
 	    <select name="fabricante_id" id="nome" value="<?php echo $produto['nome']; ?>">
 		<option></option>
 		{foreach from=$fabricantes item='item'}
-		    <option value="{$item['id']}">{$item['nome']}</option>
+		    <option value="{$item.id}"  {if $item.id == $produto.fabricante_id}selected{/if}>{$item.nome}</option>
 		{/foreach}
 	    </select>
 	    
 	    <br />
 	    
-	    <label for="descricao" style="display: inline-block; width: 75px;">Descrição</label>
-	    <textarea name="descricao" id="descricao" ></textarea>
+	    <label for="descricao">Descrição</label>
+	    <textarea name="descricao" id="descricao" >{$produto.descricao}</textarea>
 	    
 	    <br />
 	    
@@ -40,4 +44,4 @@
 	
 	<a href="index.php">Voltar</a>
 	
-{include file="includes/footer.tpl"}
+    {include file="includes/footer.tpl"}

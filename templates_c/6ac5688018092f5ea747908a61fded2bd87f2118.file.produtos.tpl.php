@@ -1,34 +1,30 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 10:52:56
-         compiled from ".\templates\index.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:79235384989faac6d9-68631734%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 14:37:18
+         compiled from ".\templates\inc\produtos.tpl" */ ?>
+<?php /*%%SmartyHeaderCode:23795384cd4e5818f3-00047106%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
-    '749422d4cfc3eb5677cf499730392b6accd4d1c7' => 
+    '6ac5688018092f5ea747908a61fded2bd87f2118' => 
     array (
-      0 => '.\\templates\\index.tpl',
-      1 => 1401198775,
+      0 => '.\\templates\\inc\\produtos.tpl',
+      1 => 1401212222,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '79235384989faac6d9-68631734',
+  'nocache_hash' => '23795384cd4e5818f3-00047106',
   'function' => 
   array (
   ),
-  'cache_lifetime' => 120,
-  'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_5384989fb3d0c5_07831522',
   'variables' => 
   array (
     'produtos' => 0,
     'produto' => 0,
   ),
   'has_nocache_code' => false,
+  'version' => 'Smarty-3.1.18',
+  'unifunc' => 'content_5384cd4e5cbd68_05108876',
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_5384989fb3d0c5_07831522')) {function content_5384989fb3d0c5_07831522($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
-
-
-<h1>Produtos</h1>
+<?php if ($_valid && !is_callable('content_5384cd4e5cbd68_05108876')) {function content_5384cd4e5cbd68_05108876($_smarty_tpl) {?><h1>Produtos</h1>
 <a href="cadastrar.php">Novo produto</a>
 <table id="produtos" width="100%" border="1">
     <tr>
@@ -67,7 +63,4 @@ if (!$_smarty_tpl->tpl_vars["produto"]->_loop) {
 	    <td colspan="5">Nenhum produto cadastrado.</td>
 	</tr>
     <?php } ?>
-</table>
-
-<?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
-<?php }} ?>
+</table><?php }} ?>

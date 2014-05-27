@@ -1,23 +1,22 @@
-<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 11:17:30
+<?php /* Smarty version Smarty-3.1.18, created on 2014-05-27 15:01:18
          compiled from ".\templates\cadastrar.tpl" */ ?>
-<?php /*%%SmartyHeaderCode:3217453849a3148d170-54078919%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
+<?php /*%%SmartyHeaderCode:73925384a0d6ca13f7-82585227%%*/if(!defined('SMARTY_DIR')) exit('no direct access allowed');
 $_valid = $_smarty_tpl->decodeProperties(array (
   'file_dependency' => 
   array (
     'e7843731932c7cda3d6006ae56f8ccc38da101b9' => 
     array (
       0 => '.\\templates\\cadastrar.tpl',
-      1 => 1401200249,
+      1 => 1401213396,
       2 => 'file',
     ),
   ),
-  'nocache_hash' => '3217453849a3148d170-54078919',
+  'nocache_hash' => '73925384a0d6ca13f7-82585227',
   'function' => 
   array (
   ),
-  'cache_lifetime' => 120,
   'version' => 'Smarty-3.1.18',
-  'unifunc' => 'content_53849a3152ac23_84143689',
+  'unifunc' => 'content_5384a0d6d37026_93925359',
   'variables' => 
   array (
     'categorias' => 0,
@@ -26,7 +25,7 @@ $_valid = $_smarty_tpl->decodeProperties(array (
   ),
   'has_nocache_code' => false,
 ),false); /*/%%SmartyHeaderCode%%*/?>
-<?php if ($_valid && !is_callable('content_53849a3152ac23_84143689')) {function content_53849a3152ac23_84143689($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+<?php if ($_valid && !is_callable('content_5384a0d6d37026_93925359')) {function content_5384a0d6d37026_93925359($_smarty_tpl) {?><?php echo $_smarty_tpl->getSubTemplate ("includes/header.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 
 	
 	<h1>Novo produto</h1>
@@ -81,5 +80,5 @@ $_smarty_tpl->tpl_vars['item']->_loop = true;
 	
 	<a href="index.php">Voltar</a>
 	
-<?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 9999, null, array(), 0);?>
+<?php echo $_smarty_tpl->getSubTemplate ("includes/footer.tpl", $_smarty_tpl->cache_id, $_smarty_tpl->compile_id, 0, null, array(), 0);?>
 <?php }} ?>
